@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C85</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="fabric.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body class="body_backgorund">
+
+	<center>
+
+	<h2 class="btn-primary">MAKE YOUR OWN SUPERHERO</h2>
+
+	<div id="head_info" class= "btn-danger">
+		<h3>Current Width  = <span id="current_width_span">30</span> </h3>
+		<h3>Current Height  = <span id="current_height">30</span></h3>
+		
+	</div>
+	<h3> Click on any keyboard key from A-S, and watch the magic. Resize your images using Shift + P(bigger), or Shift + M(smaller). You can also resize and move your images by clicking on them. If you want a key to tell you what key puts what, click the button at the bottom.</h3>
+	<canvas id="myCanvas" width="1000" height="600"></canvas>
+	<br>
+	<br>
+	<button onclick=showkey() id="keybutton"> Open Key</button>
+	<div id="keydisplay">
+		<h4> A - Captain America's Shield<br> B - Hulk's Face<br> C - Hulk's Left Hand <br> D - Hulk's Legs<br> E - Hulk's Right Hand<br> F - Hulk's Body<br> G - Ironman's Body<br> H - Ironman's Face<br> I - Ironman's Left Hand<br> J - Ironman's Right Hand<br> K - Ironman's Legs<br> L - Spiderman's Body<br> M - Spiderman's Face<br> N - Spiderman's Left Hand<br> O - Spiderman's Legs<br> P - Spiderman's Right Hand<br> Q - Thor's Face <br> R - Thor's Left Hand<br> S - Thor's Right Hand</h4></div>
+		<br>
+		<br>
+		<button id="displayex" onclick=showex()> Show Example</button>
+		<br>
+		<div id="exdiv">
+		<image id="eximage" src="Superhero final.JPG"></image>
+			<h3>Whose body parts did I use?</h3>
+			<h4>I used Ironman's Head, Spiderman's Body, Thor's Left Hand, Captain America's Right Hand, and Hulk's Legs.</h4>
+			<h3>What keys did I use?</h3>
+			<h4>The keys I needed were H, L, A, R and D.</h4>
+			</div>
+			<br>
+	</center>
+	<script src="main.js"></script>
+	
+</body>
+</html>
