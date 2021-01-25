@@ -10,7 +10,7 @@ player_object = "";
 block_image_object = "";
 
 function player_update(){
-    fabric.Image.fromURL("player.png", function(Img){
+    fabric.Image.fromURL("player (1).png", function(Img){
         player_object = Img;
         player_object.scaleToWidth(150);
         player_object.scaleToHeight(140);
@@ -184,4 +184,39 @@ function showex(){
     document.getElementById("exdiv").style.display = "inline-block";
     document.getElementById("displayex").style.display = "none";
 }
-
+function up(){
+    if(player_y >= 0){
+        player_y = player_y - block_image_height;
+        console.log("Block image height is " + block_image_height);
+        console.log("When up is pressed, player x is " + player_x + " and player y is " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function down(){
+    if(player_y <= 500){
+        player_y = player_y + block_image_height;
+        console.log("Block image height is " + block_image_height);
+        console.log("When down is pressed, player x is " + player_x + " and player y is " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function left(){
+    if(player_x > 0){
+        player_x = player_x - block_image_width;
+        console.log("Block image width is " + block_image_width);
+        console.log("When left is pressed, player x is " + player_x + " and player y is " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function right(){
+    if(player_x <= 850){
+        player_x = player_x + block_image_width;
+        console.log("Block image width is " + block_image_width);
+        console.log("When right is pressed, player x is " + player_x + " and player y is " + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
